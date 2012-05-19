@@ -1,13 +1,67 @@
--if(account && account.username)
-  h2(style='font-weight:bold;padding-bottom:5px;') Whats going on?
-  form(action='/nod',method='post')
-    textarea(name='nod',style='width:550px;')
-    input(type='submit',value='Nod',style='background-color:#000000;border:solid;border-color:#666666;border-width:1px;color:#E3E3E3;padding:5px;font-weight:bold;cursor:pointer;position:relative;top:-15px;margin-left:5px;')
+-if(account)
+    h2
+      | Ask your friends a question.
+      br
+    div.center
+      .content_610
+        #cf_main  
+          form#contact_form(action='/nod', method='post')
+            .input_wrapper
+              .cf_label 
+              input#name.required(type='text', name='nod')
+              input#name1(type='hidden', name='reqIds',value='')
+            .clear
+            div
+              input#send.button(type='button', value='Send to friends')
+              input#post.button(type='button', value='Post on Wall')
+              
+      .clear   
+      #container
+        .wrapper-box.module.profile
+          .clear
+            .boxIndent  
+              .box_blk Here's what your peeps had to say:
+              -for(var i=0;i<nods.length;i++)
+               hr.box_hr
+               .box_blue_bld 
+                  a(href='/'+nods[i]._id)= nods[i].text
+               .box_answers 
+                  span=nods[i].yes+'  Friend(s) said: "Absolutely!"'
+               .box_answers
+                  span=nods[i].no+ ' of your friend(s) said:'
+                  span.box_word_blue "Not so much!"
+               .box_daysago =howLongAgo(nods[i].last_update)+' ago'                
+      .results_label
+            a(href='/question/all')= 'Show All past questions'
+    div
+      script(src='http://connect.facebook.net/en_US/all.js')
+      script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js')
+      script(src='/nowjs/now.js')
+      #fb-root
+      script 
+          $(document).ready(function(){
+              var fQuestion = !{JSON.stringify(account)};
+              now.receiveMessage = function(qid, message){
+              postToFeed(qid,$("#name").val());
+            }
+            $("#post").click(function(){
+              now.distributeMessage($("#name").val(),fQuestion);
+            });
+            $("#send").click(function(){
+              postToFriends($("#name").val());
+            });
+          });     
+          function postToFriends(qText) {
+            FB.init({appId: '172451406173427', xfbml: true, cookie: true});
+            FB.ui({
+                method: 'apprequests',
+                message: qText     
+                }, function(response){
+                  if(response.request){
+                    document.getElementById("name1").value = response.request;
+                    document.forms["contact_form"].submit();
+                  }
+              });
+            }
+            
 
-div(style='width:600px;')
-  -for(var i=0;i<nods.length;i++)
-    div(style='background-color:#000000;padding:10px;margin-top:5px;border:solid;border-color:#666666;border-width:1px;')
-      div
-        a(href='/'+nods[i].username,style='padding-right:10px;')=nods[i].username
-      span=nods[i].text
-      div(style='color:#999999;font-size:12px;')=howLongAgo(nods[i].date)+' ago'

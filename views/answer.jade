@@ -1,0 +1,113 @@
+html
+  head
+    title=title
+    link(rel='stylesheet',type='text/css',href='/css/answer.css')
+    link(rel='stylesheet',type='text/css',href='/css/profile.css')
+    link(rel='stylesheet',type='text/css',href='/css/cm.css')
+    script(type='text/javascript',src='http://static.ak.fbcdn.net/connect/en_US/core.js')
+    script(src='http://connect.facebook.net/en_US/all.js')
+    script(type='text/javascript', src='/js/jquery.js')x
+
+
+
+
+
+    script(type="text/javascript")
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27861488-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ?
+      'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+      })();
+      
+  body
+    #centered
+      #Oobj24
+        a(href='/home')
+         img#Ggeo28(alt="", src="../images/Logo.png")
+      #Oobj25
+        a(href='/home')
+          img#Ggeo29(alt="", src="../images/The Community Mirror.png")
+      #Oobj27
+        img#Ggeo31(alt="", src="../images/Answers-Blue-Box.png")
+      #Oobj28
+        #Grtf44.dfltt
+          span.txt0
+            | Use your community as a mirror for
+            | your life
+      #Oobj29
+        #Grtf45.dfltt
+          .txt10
+            span= userfName[0]+' '+userlName[0]+' wants to know what '
+              | you think about him/her
+      #Oobj31
+        #Grtf46.dfltt
+          .txt12
+            span= question[0]
+      #Oobj32
+        #Grtf47.dfltt
+          span.txt13
+            | Answers are always
+            span.bold anonymous
+      #Oobj30
+        #Grtf51.dfltt
+          a(href="/logout")
+            span.txt4 Logout
+      #Oobj104
+        form(action='/'+id[0]+'/rate',method='post')
+          div
+            input#yes(type='submit',value='Absolutely!',name='yes')
+            br
+            br
+            input#no(type='submit',value='Not so much!',name='no')
+            input#delete(type='button',value='Delete requests')
+            
+    div      
+      script(src='http://connect.facebook.net/en_US/all.js')
+      script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js')
+      #fb-root
+      script 
+          $(document).ready(function(){
+              var requestId = !{JSON.stringify(requestId)};
+              var userFacebookId = !{JSON.stringify(userFacebookId)};
+              $("#delete").click(function(){
+                //getRequest1(requestId[0][0]);
+                getRequest1(requestId[0][0], function(recFacebookId){
+                  //alert(recFacebookId);
+                  deleteRequests(requestId[0],recFacebookId, function(success){
+                      if(success){
+                        alert('Success!')
+                      }
+                  });
+                });           
+              });
+          });  
+          function deleteRequests(reqIds,facebookId, callback){
+            //alert('inside delete')
+            FB.init({appId: '172451406173427', xfbml: true, cookie: true});
+            $.each(reqIds, function(i, requestId){ 
+              var removeId = '/'+requestId+'_'+facebookId;
+              //alert(removeId)                      
+              FB.api(removeId, 'DELETE', function(response){
+                //alert(response);
+                if(i== reqIds.length-1){
+                  callback('success');
+                }
+              });
+            });
+          } 
+          function getRequest1(requestId,callback) {
+            FB.init({appId: '172451406173427', xfbml: true, cookie: true});
+            //alert('getRequest1: '+requestId);
+            var req = '/'+requestId;
+            FB.api('', {"ids": requestId }, function(response) {
+              console.log(response[[requestId]]);
+              callback(response[[requestId]]['to']['id']);
+            });
+          }
+

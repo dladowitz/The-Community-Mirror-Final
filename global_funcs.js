@@ -23,3 +23,22 @@ howLongAgo = function(d1){
   else
     return days_diff + ' days';
 }
+/*updateQuestionInfo = function(qid, request){
+  console.log('UPDATEQUESTIONINFO: ', request);
+  Questions.findOne({_id:qid},function(err,question){
+    if(question){
+      question.request_ids.push(request);
+      question.save(function(err){
+        if (err) throw err;
+        else{
+          console.log('Question saved Success')
+          return true;
+        }
+      });
+    }
+    else{
+      return false;
+    }
+
+  });
+}*/

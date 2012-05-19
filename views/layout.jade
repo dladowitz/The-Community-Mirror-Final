@@ -1,27 +1,65 @@
 !!!
-html(lang="en")
+html(xmlns='http://www.w3.org/1999/xhtml', xmlns:fb='https://www.facebook.com/2008/fbml')
   head
     title= title
     link(rel='stylesheet',type='text/css',href='http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css')
-    link(rel='stylesheet',type='text/css',href='/css/style.css')
-    script(type='text/javascript',src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js')
+    link(rel='stylesheet',type='text/css',href='/css/default.css')
+    link(rel='stylesheet',type='text/css',href='/css/ie7.css')
+    link(rel='stylesheet',type='text/css',href='/css/ie8.css')
+    link(rel='stylesheet',type='text/css',href='/css/prettyphoto.css')
+    link(rel='stylesheet',type='text/css',href='/css/reset.css')
+    link(rel='stylesheet',type='text/css',href='/css/cm.css')
     script(type='text/javascript',src='/js/main.js')
     script(type='text/javascript',src='http://static.ak.fbcdn.net/connect/en_US/core.js')
+    script(src='http://connect.facebook.net/en_US/all.js')
+    script(type='text/javascript', src='/js/jquery.js')
+    script(type='text/javascript', src='/js/cufon.js')
+    script(type='text/javascript', src='/js/cufon_max.js')
+    script(type='text/javascript', src='/js/3d_carousel.js')
+    script(type='text/javascript', src='/js/validate.js')
+    script(type='text/javascript', src='/js/custom.js')      
   body
     div.center
-      -if(account && account.username)
-        div(style='float:right;margin-top:20px;position:relative;left:-60px;')
-          a(href='/'+account.username,style='margin-right:20px;')=account.username
-          a(href='/logout') Logout
-      -else if(!account)
-        div#facebook_login(style='position:relative;float:right;width:200px;padding-top:10px;')
-          div#fb-login.fb_button(style='float:left; background-position: left -188px')                
-            a.fb_button_medium(href='/auth/facebook')
-              span#fb_login_text.fb_button_text Connect with Facebook
-      h2 
-        span Check out my startup (also using node.js) @ 
-        a(href='http://www.exipe.com',style='color:#B9C949;') Exipe.com
-      h1 
-        a(href='/',style='color:#B9C949;') Nodrr
-      div
-        != body
+      #header
+        .header_wrapper
+          #logo
+            a(href='/home')
+              img(src='../images/green_grey/logoA.png', alt='homepage')
+          #navigation
+            ul.nav
+              li
+                a(href='/home')
+                  span Home
+              -if(account)
+                li
+                  a(href='/logout')
+                    span Logout
+      .clear
+      .main_content_wrapper.main_content_wrapper_sidebar
+        .full_width_wrapper
+          img(src='../images/green_grey/heroImg.jpg', alt='Image Caption', width='760', height='236')
+          -if(account)
+            div
+              != body
+          -else if(!account)
+            p 
+            br
+            br 
+            h3
+              a(href='/auth/facebook') 
+                img(src='../images/green_grey/fbLogin.jpg', width='310', height='54', alt='FB Login')
+              br
+              br
+              p
+                | Use your social network as a mirror for your life. 
+              p  
+                | Let the people who know you best give you ANONYMOUS feedback. 
+                
+              .clear
+      .clear
+      .footer_bg
+        .footer_wrapper
+          .clear
+          .footer_legal
+            p © 2011 Community Mirror
+          

@@ -1,0 +1,112 @@
+html
+  head
+    title=title
+    link(rel='stylesheet',type='text/css',href='/css/answer.css')
+    link(rel='stylesheet',type='text/css',href='/css/profile.css')
+    link(rel='stylesheet',type='text/css',href='/css/cm.css')
+    link(rel='stylesheet',type='text/css',href='/css/noscroll.css')
+    script(type='text/javascript',src='/js/main.js')
+    script(type='text/javascript',src='http://static.ak.fbcdn.net/connect/en_US/core.js')
+    script(src='http://connect.facebook.net/en_US/all.js')
+    script(type='text/javascript', src='/js/jquery.js')
+    #fb-root
+    script
+      window.fbAsyncInit = function() {
+          //FB.init({appId: '172451406173427', status: true, xfbml: false, cookie: true});
+          initialize();
+          console.log('FB Init called');
+          FB.Canvas.setAutoResize();
+          fbApiInit = true; //init flag
+      };
+
+    script(type="text/javascript")
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27861488-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ?
+      'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+      })();
+
+  body
+    #centered
+      #Oobj24
+        a(href='/home')
+          img#Ggeo28(alt="", src="../images/Logo.png")
+      #Oobj25
+        a(href='/home')
+          img#Ggeo29(alt="", src="../images/The Community Mirror.png")
+      #Oobj27
+        img#Ggeo31(alt="", src="../images/Answers-Blue-Box.png")
+      #Oobj28
+        #Grtf44.dfltt
+          span.txt0
+            | Use your community as a mirror for
+            | your life
+      #Oobj29
+        #Grtf45.dfltt
+          .txt10
+            span= 'Welcome '+user.fname+', Do you want share this question again'
+      #Oobj31
+        #Grtf46.dfltt
+          .txt11
+            span= question
+      #Oobj32
+        #Grtf47.dfltt
+          span.txt13
+            | Answers are always
+            span.bold anonymous
+      #Oobj30
+        #Grtf51.dfltt
+          a(href="/logout")
+            span.txt4 Logout
+      #Oobj106
+        form(action='/',method='get')
+          div
+            input#send.button(type='button', value='Ask Specific Friends')
+            input#post.button(type='button', value='Post on Wall')
+    div
+      script(src='http://connect.facebook.net/en_US/all.js')
+      script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js')
+      script(src='/nowjs/now.js')
+      #fb-root1
+      script 
+          $(document).ready(function(){
+            var fQuestion = !{JSON.stringify(id)};
+            var text = !{JSON.stringify(question)};
+            now.sendMessage = function(reply){
+              //alert(reply);
+              //if(reply){
+                window.location.replace("/");
+              //}
+            }
+            $("#post").click(function(){
+              //alert('Post clicked');
+              postToFeed(fQuestion,text);
+            });
+            $("#send").click(function(){
+              //alert('Send Clicked')
+              postToFriends(text, fQuestion);
+            });
+          });     
+          function postToFriends(qText,fQuestion) {
+            //alert('Post to friends');
+            FB.init({appId: '172451406173427', xfbml: true, cookie: true});
+            FB.ui({
+                method: 'apprequests',
+                message: qText     
+                }, function(response){
+                  if(response.request){
+                     //alert('QUESTION ID: '+fQuestion);
+                     now.updateQuestionInfo(fQuestion,response.request);
+                  }
+                  else{
+                    //alert(response);
+                    window.location.replace("/");
+                  }
+              });
+            }

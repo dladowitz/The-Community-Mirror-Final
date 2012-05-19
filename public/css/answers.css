@@ -1,0 +1,208 @@
+html
+{
+	background-color: #7F7F7F;
+}
+
+#page
+{
+	z-index: 1;
+	width: 760px;
+	min-height: 800px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #FFFFFF;
+	margin: 35px auto 36px;
+}
+
+#page_position_content
+{
+	margin-top: 12px;
+	margin-bottom: 223px;
+}
+
+#n1
+{
+	width: 0.01px;
+	margin-left: 22px;
+	position: relative;
+}
+
+#n2
+{
+	z-index: 3;
+	width: 440px;
+	position: relative;
+	margin-right: -440px;
+	margin-top: 40px;
+	left: 217px;
+}
+
+#n2_img, #n4_img, #n21_img
+{
+	vertical-align: top;
+}
+
+#n4
+{
+	z-index: 5;
+	width: 195px;
+	position: relative;
+	margin-right: -195px;
+}
+
+#n6
+{
+	z-index: 7;
+	position: relative;
+	width: 39px;
+	margin-right: -39px;
+	margin-top: 8px;
+	left: 675px;
+}
+
+#n6_img
+{
+	display: block;
+	vertical-align: top;
+}
+
+#n10
+{
+	z-index: 12;
+	width: 431px;
+	min-height: 22px;
+	position: relative;
+	margin-right: -431px;
+	margin-top: 110px;
+	left: 227px;
+}
+
+#n12
+{
+	font-size: 22px;
+	color: #7F7F7F;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+}
+
+#n14
+{
+	color: #7F7F7F;
+}
+
+#n16
+{
+	z-index: 18;
+	width: 5px;
+	position: relative;
+	margin-right: -5px;
+	margin-top: 111px;
+	left: 861px;
+}
+
+#n20
+{
+	width: 0.01px;
+	margin-left: 23px;
+	margin-top: 26px;
+	position: relative;
+}
+
+#n21
+{
+	z-index: 23;
+	width: 710px;
+	position: relative;
+	margin-right: -710px;
+}
+
+#n23
+{
+	z-index: 25;
+	width: 429px;
+	min-height: 52px;
+	position: relative;
+	margin-right: -429px;
+	margin-top: 33px;
+	left: 18px;
+}
+
+#n25
+{
+	font-size: 36px;
+	color: #FFFFFF;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+}
+
+#n27
+{
+	z-index: 29;
+	width: 527px;
+	min-height: 28px;
+	position: relative;
+	margin-right: -527px;
+	margin-top: 10px;
+	left: 19px;
+}
+
+#n29
+{
+	font-size: 18px;
+	color: #EFEFEF;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+}
+
+#n31
+{
+	color: #EFEFEF;
+}
+
+#n33
+{
+	z-index: 35;
+	width: 202px;
+	position: relative;
+	margin-right: -202px;
+	margin-top: 93px;
+	left: 20px;
+}
+
+#n35
+{
+	font-size: 13px;
+	color: #EFEFEF;
+}
+
+#n37
+{
+	font-weight: bold;
+}
+
+#n38
+{
+	z-index: 40;
+	width: 82px;
+	min-height: 14px;
+	position: relative;
+	margin-right: -82px;
+	margin-top: 93px;
+	left: 234px;
+}
+
+#n40, #n44
+{
+	font-size: 16px;
+	color: #5871A6;
+}
+
+#n42
+{
+	z-index: 44;
+	width: 92px;
+	min-height: 14px;
+	position: relative;
+	margin-right: -92px;
+	margin-top: 93px;
+	left: 332px;
+}
+

@@ -1,0 +1,18 @@
+h2(style='font-weight:bold;font-size:20px;text-align:center;')='Help '+user.fname+' by answering this question'
+
+br
+form(action='/'+id+'/rate',method='post')
+    input(type = 'text', name='question',style='width:350px;margin-left:45px;',value =question, disabled='disabled')
+    br
+    br
+    br
+    input(type='submit',value='Absolutely!',name='yes')
+    input(type='submit',value='Not so much!',name='no')
+
+div(style='width:600px;')
+  -for(var i=0;i<nods.length;i++)
+    div(style='background-color:#000000;padding:10px;margin-top:5px;border:solid;border-color:#666666;border-width:1px;')
+      div
+        a(href='/'+nods[i].username,style='padding-right:10px;')=nods[i].username
+      span=nods[i].text
+      div(style='color:#999999;font-size:12px;')=howLongAgo(nods[i].last_update)+' ago'

@@ -1,0 +1,42 @@
+html
+  head
+    meta(content="text/html; charset=iso-8859-1" http-equiv="Content-Type")
+    title Thank You
+    meta(content="Community Mirror, Social Feedback" name="Description")
+    meta(content="Community Mirror, Social Feedback" name="keywords")
+    meta(content="false" http-equiv="imagetoolbar")
+    link(href="css/thankyou.css" type="text/css" rel="stylesheet")
+  body
+    #centered
+      #Oobj46
+        img#Ggeo42(alt="" src="images/Thank-You-Page-v1.png")
+      #Oobj35
+        img#Ggeo33(alt="" src="images/Logo.png")
+      #Oobj36
+        img#Ggeo34(alt="" src="images/The Community Mirror.png")
+      #Oobj38
+        #Grtf48.dfltt
+          span.txt0
+            | Use your community as a mirror for
+            | your life
+      #Oobj39
+        #Grtf49.dfltt
+          span.txt1
+            | Thanks for helping out! We're sure
+            | your friends appreciate the feedback.
+      #Oobj40
+        #Grtf50.dfltt
+          span.txt2 Ask your own question:
+      #Oobj44
+        #Grtf53.dfltt
+          a(href="http://www.yahoo.com")
+            span.txt3 Logout
+      #Oobj48
+        #Gcode68.dfltc
+          form
+            input(style="color:&lt;scriptlet&gt;&lt;![CDATA[726E6D]]&gt;&lt;/scriptlet&gt;; background-color:Gainsboro; font-size:20; font-family:Tahoma;" name="question" maxlength="80" size="60" type="text")
+      form#Oform3(enctype="application/x-www-form-urlencoded" method="GET" action="" name="form3")
+        #Oobj101
+          input#Gform7.dfltf(onmouseout="window.status=' '" onmouseover="window.status='http://www.yahoo.com/'" onclick="window.location.href= 'http://www.yahoo.com/'" value="Ask specific friends" name="form1" type="button")
+        #Oobj102
+          input#Gform8.dfltf(onmouseout="window.status=' '" onmouseover="window.status='http://www.yahoo.com/'" onclick="window.location.href= 'http://www.yahoo.com/'" value="Post to your wall" name="form1" type="button")

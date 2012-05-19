@@ -1,0 +1,143 @@
+html
+
+a:link {color: #0000ff;}
+a:visited {color: #800080;}
+a:active {color: #ff0000;}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+}
+img {
+  border-width: 0;
+  vertical-align: top;
+}
+.dfltt {
+  font-family: 'Times New Roman';
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: left;
+  color: #000000;
+}
+.lalign {
+  position: relative;
+  text-align: left;
+}
+.ralign {
+  position: relative;
+  text-align: right;
+}
+.calign {
+  position: relative;
+  text-align: center;
+}
+.jalign {
+  position: relative;
+  text-align: justify;
+}
+
+#centered {
+  position: relative;
+  width: 760px;
+  height: 100%;
+  margin: 0px auto 0 auto;
+  text-align: left;
+  padding-left: 1px;
+  cursor: default;
+}
+#Oobj202 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 1;
+  left: 0.00em;
+  top: 19.30em;
+  width: 75.90em;
+  height: 46.40em;
+}
+#Oobj187 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 2;
+  left: 1.30em;
+  top: 1.10em;
+  width: 19.40em;
+  height: 16.30em;
+}
+#Oobj188 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 3;
+  left: 23.00em;
+  top: 5.30em;
+  width: 41.40em;
+  height: 7.30em;
+}
+#Oobj189 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 4;
+  text-align: left;
+  left: 22.10em;
+  top: 11.70em;
+  width: 44.50em;
+  height: 3.40em;
+}
+.txt0 {
+  font-family: Tahoma, sans-serif;
+  font-size: 23px;
+}
+#Oobj190 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 5;
+  text-align: left;
+  left: 28.20em;
+  top: 1.00em;
+  width: 6.00em;
+  height: 2.40em;
+}
+.txt1 {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: #004080;
+}
+#Oobj214 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 6;
+  text-align: left;
+  left: 2.10em;
+  top: 20.20em;
+  width: 57.80em;
+  height: 5.80em;
+}
+.txt2 {
+  font-family: Tahoma, sans-serif;
+  font-size: 40px;
+  color: #004080;
+}
+#Oobj201 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 7;
+  text-align: left;
+  left: 2.10em;
+  top: 27.50em;
+  width: 45.40em;
+  height: 37.40em;
+}
+.txt3 {
+  font-family: Tahoma, sans-serif;
+  font-size: 15px;
+  color: #646464;
+}
+.txt4 {
+  font-family: Tahoma, sans-serif;
+  font-size: 19px;
+  color: #004080;
+}

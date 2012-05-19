@@ -1,0 +1,73 @@
+html
+  head
+    title=title
+    link(rel='stylesheet',type='text/css',href='/css/answer.css')
+    link(rel='stylesheet',type='text/css',href='/css/profile.css')
+    link(rel='stylesheet',type='text/css',href='/css/cm.css')
+    script(type='text/javascript',src='http://static.ak.fbcdn.net/connect/en_US/core.js')
+    script(src='http://connect.facebook.net/en_US/all.js')
+    script(type='text/javascript', src='/js/jquery.js')x
+  body
+    #centered
+      #Oobj24
+        a(href='/home')
+         img#Ggeo28(alt="", src="../images/Logo.png")
+      #Oobj25
+        a(href='/home')
+          img#Ggeo29(alt="", src="../images/The Community Mirror.png")
+      #Oobj27
+        img#Ggeo31(alt="", src="../images/Answers-Blue-Box.png")
+      #Oobj28
+        #Grtf44.dfltt
+          span.txt0
+            | Use your community as a mirror for
+            | your life
+      #Oobj29
+        #Grtf45.dfltt
+          .txt10
+            span= user.fname+' wants to know what '
+              | you think about him/her
+      #Oobj31
+        #Grtf46.dfltt
+          .txt12
+            span= question
+      #Oobj32
+        #Grtf47.dfltt
+          span.txt13
+            | Answers are always
+            span.bold anonymous
+      #Oobj30
+        #Grtf51.dfltt
+          a(href="/logout")
+            span.txt4 Logout
+      #Oobj104
+        form(action='/'+id+'/rate',method='post')
+          div
+            input#yes(type='submit',value='Absolutely!',name='yes')
+            br
+            br
+            input#no(type='submit',value='Not so much!',name='no')
+            input#delete(type='button',value='Delete requests')
+            
+    div      
+      script(src='http://connect.facebook.net/en_US/all.js')
+      script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js')
+      #fb-root
+      script 
+          $(document).ready(function(){
+              var requestId = !{JSON.stringify(requestId)};
+              $("#delete").click(function(){
+                alert(requestId);  
+                deleteRequests(requestId);              
+              });
+          });  
+          function deleteRequests(reqIds){
+            FB.init({appId: '201147376628942', xfbml: true, cookie: true});
+            for(var i=0;i<reqIds.length;i++){
+              alert(reqIds[i]);
+              FB.api(reqIds[i], 'delete', function(response) {
+                alert(response);
+              });
+            }
+          } 
+

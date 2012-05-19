@@ -1,0 +1,52 @@
+html
+  head
+    title=title
+    link(rel='stylesheet',type='text/css',href='/css/thankyou.css')
+    link(rel='stylesheet',type='text/css',href='/css/cm.css')
+
+    script(type="text/javascript")
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27861488-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ?
+      'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+      })();
+
+
+  body
+    #centered
+      #Oobj46
+        img#Ggeo42(alt="", src="../images/Thank-You-Page-v1.png")
+      #Oobj35
+        a(href='/home')
+          img#Ggeo33(alt="", src="../images/Logo.png")
+      #Oobj36
+        a(href='/home')
+          img#Ggeo34(alt="", src="../images/The Community Mirror.png")
+      #Oobj38
+        #Grtf48.dfltt
+          span.txt0
+            | Thanks for helping out! We're sure
+            | your friends appreciate the feedback.
+      #Oobj41
+        span.txt1
+            | Ask your own question...
+
+      #Oobj40
+        #Grtf50.dfltt          
+          form#contact_form(action='/nod', method='post')
+            .dfltf               
+              input#name.required(type='text', name='nod',style='color:#726E6D;font-size:20;font-family:Tahoma; background-color:Gainsboro;',size ='30',maxlength='80')    
+              br  
+              #Oobj43                
+                input#send.button(type='button', value='Ask Specific Friends')
+                input#post.button(type='button', value='Post on Wall')
+      #Oobj48
+        #Gcode68.dfltc
+          a(href="/auth/facebook")
+            img#Ggeo22(alt="", src="../images/Connect with Facebook.png")

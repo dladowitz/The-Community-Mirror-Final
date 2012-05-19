@@ -1,0 +1,35 @@
+-if(account)
+    br
+    h3 Welcome Back! 
+    h2
+      br
+      | Ask your friends a question.
+      br
+    div.center
+      .content_610
+        #cf_main
+          form#contact_form(action='/nodPost', method='post')
+            .input_wrapper
+              .cf_label 
+              input#name.required(type='text', name='nod')
+            .clear
+            div
+              input#submit.button(type='submit', value='Save')
+      .clear
+      br
+      h3
+        br
+        | Here is what your peeps had to say about you:
+      -for(var i=0;i<nods.length;i++)
+          .content_separator
+            #cf_main
+              .results_label
+                a(href='/'+nods[i]._id)= nods[i].text
+              .poll_results
+                span= nods[i].yes+'  Friend(s) said: "Absolutely!"'
+              .poll_results
+                span= nods[i].no+ '   Friend(s) said: "Not so much"'
+                div(style='color:#999999;font-size:12px;')=howLongAgo(nods[i].last_update)+' ago'
+      .results_label
+            a(href='/question/all')= 'Show All past questions'
+     

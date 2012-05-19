@@ -1,0 +1,212 @@
+html
+{
+	background-color: #7F7F7F;
+}
+
+#page
+{
+	z-index: 1;
+	width: 760px;
+	min-height: 800px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #FFFFFF;
+	margin: 35px auto 36px;
+}
+
+#page_position_content
+{
+	margin-top: 12px;
+	margin-bottom: 181px;
+}
+
+#n1
+{
+	width: 0.01px;
+	margin-left: 22px;
+	position: relative;
+}
+
+#n2
+{
+	z-index: 3;
+	width: 440px;
+	position: relative;
+	margin-right: -440px;
+	margin-top: 40px;
+	left: 217px;
+}
+
+#n2_img, #n4_img, #n21_img
+{
+	vertical-align: top;
+}
+
+#n4
+{
+	z-index: 5;
+	width: 195px;
+	position: relative;
+	margin-right: -195px;
+}
+
+#n6
+{
+	z-index: 7;
+	position: relative;
+	width: 39px;
+	margin-right: -39px;
+	margin-top: 8px;
+	left: 675px;
+}
+
+#n6_img
+{
+	display: block;
+	vertical-align: top;
+}
+
+#n10
+{
+	z-index: 12;
+	width: 431px;
+	min-height: 22px;
+	position: relative;
+	margin-right: -431px;
+	margin-top: 110px;
+	left: 227px;
+}
+
+#n12
+{
+	font-size: 22px;
+	color: #7F7F7F;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+}
+
+#n14
+{
+	color: #7F7F7F;
+}
+
+#n16
+{
+	z-index: 18;
+	width: 5px;
+	position: relative;
+	margin-right: -5px;
+	margin-top: 111px;
+	left: 861px;
+}
+
+#n20
+{
+	width: 0.01px;
+	margin-left: 21px;
+	margin-top: 19px;
+	position: relative;
+}
+
+#n21
+{
+	z-index: 23;
+	width: 741px;
+	position: relative;
+	margin-right: -741px;
+}
+
+#n23
+{
+	z-index: 25;
+	width: 599px;
+	min-height: 30px;
+	position: relative;
+	margin-right: -599px;
+	margin-top: 11px;
+	left: 44px;
+}
+
+#n24
+{
+	width: 599px;
+	position: relative;
+	margin-right: -599px;
+	margin-top: 5px;
+}
+
+#n26
+{
+	font-size: 18px;
+	color: #EFEFEF;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+}
+
+#n28
+{
+	z-index: 29;
+	width: 5px;
+	position: relative;
+	margin-right: -5px;
+	left: 72px;
+}
+
+#n32
+{
+	z-index: 33;
+	width: 376px;
+	min-height: 34px;
+	position: relative;
+	margin-right: -376px;
+	margin-top: 44px;
+	left: 155px;
+}
+
+#n34
+{
+	font-size: 36px;
+	color: #FFFFFF;
+}
+
+#n36
+{
+	z-index: 37;
+	width: 132px;
+	min-height: 10px;
+	position: relative;
+	margin-right: -132px;
+	margin-top: 130px;
+	left: 196px;
+}
+
+#n38, #n42
+{
+	font-size: 15px;
+	color: #5871A6;
+}
+
+#n40
+{
+	z-index: 41;
+	width: 112px;
+	min-height: 10px;
+	position: relative;
+	margin-right: -112px;
+	margin-top: 130px;
+	left: 354px;
+}
+
+#n44
+{
+	z-index: 45;
+	width: 352px;
+	min-height: 21px;
+	border-style: none;
+	background-color: transparent;
+	font-weight: normal;
+	position: relative;
+	margin-right: -352px;
+	margin-top: 93px;
+	left: 160px;
+}
+

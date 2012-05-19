@@ -1,0 +1,146 @@
+html
+  head
+    title=title
+    link(rel='stylesheet',type='text/css',href='/css/thankyou.css')
+    link(rel='stylesheet',type='text/css',href='/css/cm.css')
+    script(type='text/javascript',src='/js/main.js')
+    #fb-root
+    script
+      window.fbAsyncInit = function() {
+          //FB.init({appId: '172451406173427', status: true, xfbml: false, cookie: true});
+          initialize();
+          console.log('FB Init called');
+          FB.Canvas.setAutoResize();
+          fbApiInit = true; //init flag
+      };
+    script(type="text/javascript")
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27861488-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ?
+      'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+      })();
+
+
+  body
+
+    script(type="text/javascript")
+      var WRInitTime=(new Date()).getTime();
+
+
+    #centered
+      #Oobj46
+        img#Ggeo42(alt="", src="../images/Thank-You-Page-v1.png")
+      #Oobj35
+        a(href='/home')
+          img#Ggeo33(alt="", src="../images/Logo.png")
+      #Oobj36
+        a(href='/home')
+          img#Ggeo34(alt="", src="../images/The Community Mirror.png")
+      #Oobj38
+        #Grtf48.dfltt
+          span.txt0
+            | Thanks for helping out! We're sure
+            | your friends appreciate the feedback.
+      #Oobj41
+        span.txt1
+            | Ask your own question...
+
+      #Oobj40
+        #Grtf50.dfltt          
+          form#contact_form(action='/nod', method='post')
+            .dfltf               
+              input#name.required(type='text', name='nod',style='color:#726E6D;font-size:20;font-family:Tahoma; background-color:Gainsboro;',size ='30',maxlength='80')    
+              br  
+              #Oobj43                
+                input#send.button(type='button', value='Ask Specific Friends')
+                input#post.button(type='button', value='Post on Wall')
+      #Oobj48
+        #Gcode68.dfltc
+          a(href="/auth/facebook")
+            img#Ggeo22(alt="", src="../images/Connect with Facebook.png")
+    div
+      script(src='http://connect.facebook.net/en_US/all.js')
+      script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js')
+      script(src='/nowjs/now.js')      
+      #fb-root1
+      script 
+          $(document).ready(function(){
+              
+              now.authenticated = function(account, value){
+                if(value == '2')
+                {
+                  postToFriends($("#name").val(), account)
+                  //alert(value)
+                  
+                }
+                else{
+                  //postToFeed(value,$("#name").val());
+                  now.distributeMessage($("#name").val(),account);
+                }
+              
+              }
+              now.receiveMessage = function(qid, message){
+                if(message == 'sent')
+                {
+                  window.location.reload(true);
+                  
+                }
+                else{
+                  console.log('Question:'+qid)
+                  postToFeed(qid,$("#name").val());
+                }
+              }
+              $("#post").click(function(){
+                fbLogin(function(response){
+                  if(response){
+                    console.log('response '+response)
+                    now.saveUser(response,$("#name").val(),'1');
+                   }
+                });
+              });
+              $("#send").click(function(){              
+               fbLogin(function(response){
+                  if(response){
+                    console.log('response '+response)                    
+                    now.saveUser(response,$("#name").val(),'2');
+                   }
+                });
+              });
+          });     
+          function postToFriends(qText, fQuestion) {            
+            FB.init({appId: '172451406173427', xfbml: true, cookie: true});
+            FB.ui({
+                method: 'apprequests',
+                message: qText     
+                }, function(response){
+                  if(response.request){
+                    now.saveRequest(qText,fQuestion,response.request);
+                  }
+              });
+            }
+            function fbLogin(callback) {
+              FB.login(function(response) {
+                if (response.authResponse) {
+                  console.log('callback called')
+                  FB.api('/me', function(response) {
+                    callback(response);
+                  });
+                } else {
+                   //window.location.reload(true);
+                   //callback(null);
+                }
+              }, {scope:'read_stream,publish_stream,offline_access'});
+            }
+
+
+    #ClickTaleDiv(style="display: none;")
+    script(type="text/javascript")
+      if(document.location.protocol!='https:')
+      document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRc5.js'%20type='text/javascript'%3E%3C/script%3E"));
+    script(type="text/javascript") if(typeof ClickTale=='function') ClickTale(3855,1,"www09");

@@ -1,0 +1,76 @@
+-if(account)
+    h2
+      | Ask your friends a question. Ask Again
+      br
+    div.center
+      .content_610
+        #cf_main  
+          form#contact_form(action='/', method='get')
+            .input_wrapper
+              .cf_label 
+              input#name.required(type='text', name='nod',value=question, disabled='disabled')
+              input#name1(type='hidden', name='reqIds',value='')
+            .clear
+            div
+              input#send.button(type='button', value='Send to friends')
+              input#post.button(type='button', value='Post on Wall')
+              
+      .clear   
+      #container
+        .wrapper-box.module.profile
+          .clear
+            .boxIndent  
+              .box_blk Here's what your peeps had to say:
+              -for(var i=0;i<nods.length;i++)
+               hr.box_hr
+               .box_blue_bld 
+                  a(href='/'+nods[i]._id)= nods[i].text
+               .box_answers 
+                  span=nods[i].yes+'  Friend(s) said: "Absolutely!"'
+               .box_answers
+                  span=nods[i].no+ ' of your friend(s) said:'
+                  span.box_word_blue "Not so much!"
+               .box_daysago =howLongAgo(nods[i].last_update)+' ago'                
+      .results_label
+            a(href='/question/all')= 'Show All past questions'
+    div
+      script(src='http://connect.facebook.net/en_US/all.js')
+      script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js')
+      script(src='/nowjs/now.js')
+      #fb-root
+      script 
+          $(document).ready(function(){
+            var fQuestion = !{JSON.stringify(id)};
+            now.sendMessage = function(reply){
+              //alert(reply);
+              if(reply){
+                window.location.replace("http://www.communitymirrortest.com");
+              }
+            }
+            $("#post").click(function(){
+              //alert('Post clicked');
+              postToFeed(fQuestion,$("#name").val());
+            });
+            $("#send").click(function(){
+              //alert('Send Clicked')
+              postToFriends($("#name").val(), fQuestion);
+            });
+          });     
+          function postToFriends(qText,fQuestion) {
+            //alert('Post to friends');
+            FB.init({appId: '172451406173427', xfbml: true, cookie: true});
+            FB.ui({
+                method: 'apprequests',
+                message: qText     
+                }, function(response){
+                  if(response.request){
+                     //alert('QUESTION ID: '+fQuestion);
+                     now.updateQuestionInfo(fQuestion,response.request);
+                  }
+                  else{
+                    //alert(response);
+                  }
+              });
+            }
+          
+

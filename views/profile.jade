@@ -1,0 +1,173 @@
+html
+  head
+    <meta http-equiv="P3P" content='CP=""'>
+    link(rel='stylesheet',type='text/css',href='/css/profile.css')    
+    link(rel='stylesheet',type='text/css',href='/css/cm.css')
+    script(type='text/javascript',src='/js/main.js')
+    script(type='text/javascript',src='http://static.ak.fbcdn.net/connect/en_US/core.js')
+    script(src='http://connect.facebook.net/en_US/all.js')
+    script(type='text/javascript', src='/js/jquery.js')
+    #fb-root
+    script
+       window.fbAsyncInit = function() {
+          //FB.init({appId: '172451406173427', status: true, xfbml: false, cookie: true});
+          initialize();
+          console.log('FB Init called');
+          FB.Canvas.setAutoResize();
+          fbApiInit = true; //init flag
+        };
+    script(type="text/javascript")
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27861488-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ?
+      'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+      })();
+
+    script(type="text/javascript")
+      var uvOptions = {};
+      (function() {
+      var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+      uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/AlO72PLOrxgC92cKyBP16w.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+      })();
+
+
+
+
+
+  body
+
+    script(type="text/javascript")
+      var WRInitTime=(new Date()).getTime();
+
+    #centered
+       #Oobj207
+        img#Ggeo97(alt="", src="../images/Profile-Page-v4_11.png")
+       #Oobj92
+        img#Ggeo68(alt="", src="../images/Blue_bar.png")   
+      #Oobj76
+        a(href='/home')
+          img#Ggeo58(alt="", src="../images/Logo.png")
+      #Oobj205
+        img#Ggeo95(alt="", src="../images/Blue-Box_03.png")
+      #Oobj206
+        img#Ggeo96(alt="", src="../images/Profile-Page-v4_03.png")
+      #Oobj77
+        a(href='/home')
+          img#Ggeo59(alt="", src="../images/The Community Mirror.png")
+      #Oobj79
+        #Grtf63.dfltt
+          span.txt0
+            | Use your community as a mirror for
+            | your life
+      #Oobj85
+        #Grtf67.dfltt
+          a(href="/logout")
+            span.txt1 Logout
+      #Oobj204
+        #Grtf223.dfltt
+          .txt5
+            span= 'You are currently ranked '+rank+'th with '+ account.totalResponses+' responses'
+            br
+      #Oobj93
+        #Grtf131.dfltt
+          span.txt2 Ask a question:
+      #Oobj88
+        #Gcode70.dfltc
+          form#contact_form(action='/nod', method='post')
+            .dfltf 
+              input#name.required(type='text', name='nod',style='color:#726E6D;font-size:20;font-family:Tahoma; background-color:Gainsboro;',size ='30',maxlength='80')      
+              div
+                input#send.button(type='button', value='Ask Specific Friends')
+                input#post.button(type='button', value='Post on Wall')
+      
+      #Oobj103
+        #Grtf189.dfltt
+          span.txt7
+            | Here's what your people had to
+            | say:
+      #container
+        .wrapper-box.module.profile
+          .clear
+            .boxIndent 
+              -for(var i=0;i<nods.length;i++)
+               hr.box_hr
+               .box_blue_bld 
+                  a(href='/'+nods[i]._id)= nods[i].text
+               .box_answers 
+                  span=nods[i].yes+'  Friend(s) said: "Absolutely!"'
+               .box_answers
+                  span=nods[i].no+ ' of your friend(s) said:'
+                  span.box_word_blue "Not so much!"
+               .box_daysago 
+                  span= howLongAgo(nods[i].last_update)+' ago'  
+            div             
+            .results_label
+              a(href='/question/all')= 'Show All past questions'
+      #Oobj210
+        #Grtf211.dfltt
+          span.txt7
+            | Community Leaders
+            br
+      #Oobj208 
+        -for(var i=0;i<leaders.length;i++)
+          hr
+          #Grtf212.dfltt
+            .txt8
+              span= i+1 +'. '+ leaders[i].fname+' '+leaders[i].lname              
+          #Grtf213.dfltt
+            .txt9
+              span= leaders[i].totalResponses+' responses'            
+          #Grtf224.dfltt
+            .txt9
+              span= leaders[i].totalQuestions+' questions asked'
+            
+    div
+      script(src='http://connect.facebook.net/en_US/all.js')
+      script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js')
+      script(src='/nowjs/now.js')
+      #fb-root1
+      script 
+          $(document).ready(function(){
+              var fQuestion = !{JSON.stringify(account)};
+              now.receiveMessage = function(qid, message){
+                if(message == 'sent')
+                {
+                  window.location.replace("/");
+                  
+                }
+                else{
+                  postToFeed(qid,$("#name").val());
+                }
+              
+              }
+              $("#post").click(function(){
+                now.distributeMessage($("#name").val(),fQuestion);
+              });
+              $("#send").click(function(){              
+                postToFriends($("#name").val(),fQuestion);
+              });
+          });     
+          function postToFriends(qText, fQuestion) {            
+            FB.init({appId: '172451406173427', xfbml: true, cookie: true});
+            FB.ui({
+                method: 'apprequests',
+                message: qText     
+                }, function(response){
+                  if(response.request){
+                    now.saveRequest(qText,fQuestion,response.request);
+                  }
+              });
+            }
+        
+    #ClickTaleDiv(style="display: none;")
+    script(type="text/javascript")
+      if(document.location.protocol!='https:')
+      document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRc5.js'%20type='text/javascript'%3E%3C/script%3E"));
+    script(type="text/javascript") if(typeof ClickTale=='function') ClickTale(3855,1,"www09");

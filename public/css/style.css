@@ -1,5 +1,7 @@
-html,body{
+/*html,body{
   background-color:#22252A;
+  background-image:url('/images/Jumpingfriends.jpg');
+  background-size: 85%;
   color:#E3E3E3;
   font-family: Arial, sans-serif;
 }
@@ -18,6 +20,7 @@ h1{
   padding-top:10px;
   padding-bottom:10px;
 }
+*/
 
 div.center a{
   color:#B9C949;

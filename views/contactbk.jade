@@ -1,0 +1,30 @@
+-if(account)
+    h1 Welcome Back! 
+    h3
+      | Ask another question to your friends. 
+    .main_center
+      .content_610
+        #cf_main
+          form#contact_form(action='/nod', method='post')
+            .input_wrapper
+              .cf_label What question would you like to ask your friends?
+              input#name.required(type='text', name='nod')
+            .clear
+            div
+              input#submit.button(type='submit', value='Save')
+      .clear
+      h3
+        | Find out what your friends had to say about you.
+      .clear
+        -for(var i=0;i<nods.length;i++)
+          .content_separator
+            br
+            #cf_main
+              .results_label
+                a(href='/'+nods[i]._id)= nods[i].text
+              .poll_results
+                span= nods[i].yes+'  Said you Rock!'
+              .poll_results
+                span= nods[i].no+ '   Said hate to be honest!'
+                div(style='color:#999999;font-size:12px;')=howLongAgo(nods[i].last_update)+' ago'
+     

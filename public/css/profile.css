@@ -1,0 +1,583 @@
+html
+
+
+a:link {color: #0000ff;}
+a:visited {color: #800080;}
+a:active {color: #ff0000;}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow:hidden;
+
+
+}
+img {
+  border-width: 0;
+  vertical-align: top;
+}
+.dfltt {
+  font-family: 'Times New Roman';
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: left;
+  color: #000000;
+}
+.dfltc {
+  font-family: 'Times New Roman';
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: left;
+  color: #000000;
+}
+.lalign {
+  position: relative;
+  text-align: left;
+}
+.ralign {
+  position: relative;
+  text-align: right;
+}
+.calign {
+  position: relative;
+  text-align: center;
+}
+.jalign {
+  position: relative;
+  text-align: justify;
+}
+form#Oform3 {
+  visibility: visible;
+  margin: 0px;
+  font-size: 10px;
+}
+.dfltf  {
+  position: absolute;
+  color: #000000;
+  font-family: 'Times New Roman';
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#centered {
+  position: relative;
+  width: 746px;
+  height: 100%;
+  margin: 0px auto 0 auto;
+  text-align: left;
+  padding-left: 1px;
+  cursor: default;
+}
+/*
+new css for leader board
+*/
+#Oobj207 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 1;
+  left: 52.90em;
+  top: 29.60em;
+  width: 23.00em;
+  height: 36.90em;
+}
+#Oobj208 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 28;
+  text-align: left;
+  left: 55.80em;
+  top: 33.30em;
+  width: 20.00em;
+  height: 2.30em;
+}
+.txt8 {
+  font-family: Tahoma, sans-serif;
+  font-size: 14px;
+  color: #004080;
+}
+#Oobj210 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 27;
+  text-align: left;
+  left: 55.40em;
+  top: 30.70em;
+  width: 18.30em;
+  height: 3.00em;
+}
+#Oobj211 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 29;
+  text-align: left;
+  left: 56.80em;
+  top: 36.30em;
+  width: 18.00em;
+  height: 2.30em;
+}
+.txt9 {
+  font-family: Tahoma, sans-serif;
+  font-size: 13px;
+  color: #646464;
+}
+#Oobj212 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 30;
+  text-align: left;
+  left: 56.80em;
+  top: 38.00em;
+  width: 18.00em;
+  height: 1.90em;
+}
+#Oobj209 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 2;
+  left: 0.00em;
+  top: 29.70em;
+  width: 52.90em;
+  height: 36.90em;
+}
+#Oobj206 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 3;
+  left: 21.40em;
+  top: 14.50em;
+  width: 45.00em;
+  height: 5.00em;
+}
+#Oobj204 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 25;
+  text-align: left;
+  left: 23.00em;
+  top: 15.20em;
+  width: 40.70em;
+  height: 2.90em;
+  color:red;
+}
+.bold {font-weight: bold;}
+#Oobj205 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 4;
+  left: 0.90em;
+  top: 19.00em;
+  width: 72.70em;
+  height: 8.90em;
+}
+#Oobj76 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 5;
+  left: 1.30em;
+  top: 1.10em;
+  width: 19.40em;
+  height: 16.30em;
+}
+#Oobj77 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 6;
+  left: 23.00em;
+  top: 5.30em;
+  width: 41.40em;
+  height: 7.30em;
+}
+#Oobj79 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 7;
+  text-align: left;
+  left: 22.10em;
+  top: 11.70em;
+  width: 44.50em;
+  height: 3.40em;
+}
+/****   End of new css******/
+
+#Oobj92 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 1;
+  left: 0.00em;
+  top: 18.20em;
+  width: 75.40em;
+  height: 44.10em;
+}
+#Oobj131 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 2;
+  left: 1.10em;
+  top: 36.50em;
+  width: 59.20em;
+  height: 11.40em;
+}
+#Oobj76 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 3;
+  left: 0.60em;
+  top: 1.10em;
+  width: 19.40em;
+  height: 16.30em;
+}
+#Oobj77 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 4;
+  left: 22.30em;
+  top: 5.30em;
+  width: 41.40em;
+  height: 7.30em;
+}
+#Oobj79 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 5;
+  text-align: left;
+  left: 21.40em;
+  top: 11.70em;
+  width: 44.50em;
+  height: 3.40em;
+}
+.txt0 {
+  font-family: Tahoma, sans-serif;
+  font-size: 23px;
+}
+
+.txt0b {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: gray;
+}
+
+#Oobj85 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 6;
+  text-align: left;
+  left: 67.50em;
+  top: 1.00em;
+  width: 6.00em;
+  height: 2.40em;
+}
+.txt1 {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: #004080;
+}
+#Oobj88 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 7;
+  text-align: left;
+  left: 21.30em;
+  top: 18.50em;
+  width: 41.00em;
+  height: 3.70em;
+}
+#Oobj93 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 8;
+  text-align: left;
+  left: 2.90em;
+  top: 20.60em;
+  width: 18.70em;
+  height: 3.80em;
+}
+.txt2 {
+  font-family: Tahoma, sans-serif;
+  font-size: 27px;
+  color: #ffffff;
+}
+#Oobj96 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 9;
+  left: 36.10em;
+  top: 23.20em;
+  width: 12.30em;
+  height: 2.80em;
+}
+#Gform1 {
+  width: 100%;
+  height: 100%;
+  color: #004080;
+  font-family: Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  cursor:pointer;
+}
+#Oobj95 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 10;
+  left: 21.40em;
+  top: 23.20em;
+  width: 14.10em;
+  height: 2.80em;
+}
+#Gform5 {
+  width: 100%;
+  height: 100%;
+  color: #004080;
+  font-family: Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  cursor:pointer;
+}
+#Oobj108 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 11;
+  text-align: left;
+  left: 4.30em;
+  top: 37.20em;
+ 
+}
+.txt3 {
+  font-family: Tahoma, sans-serif;
+  font-size: 21px;
+  color: #004080;
+}
+#Oobj109 {
+  position: relative;
+  font-size: 10px;
+  z-index: 12;
+  text-align: left;
+  left: 8.00em;
+  top: 39.90em;
+ 
+}
+.txt4 {
+  font-family: Tahoma, sans-serif;
+  font-size: 19px;
+  color: #646464;
+}
+.txt5 {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: red;/*#004080;*/
+}
+#Oobj110 {
+  position: relative;
+  font-size: 10px;
+  z-index: 13;
+  text-align: left;
+  left: 8.00em;
+  top: 42.30em;
+ 
+}
+#Oobj112 {
+  position: relative;
+  font-size: 10px;
+  z-index: 14;
+  text-align: left;
+  left: 7.80em;
+  top: 44.70em;
+}
+.txt6 {
+  font-family: Tahoma, sans-serif;
+  font-size: 13px;
+  color: #646464;
+}
+#Oobj138 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 15;
+  left: 1.10em;
+  top: 47.50em;
+  width: 59.20em;
+  height: 11.40em;
+}
+#Oobj134 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 16;
+  text-align: left;
+  left: 7.80em;
+  top: 55.60em;
+  width: 40.00em;
+  height: 2.10em;
+}
+#Oobj135 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 17;
+  text-align: left;
+  left: 8.00em;
+  top: 53.20em;
+  width: 40.00em;
+  height: 2.90em;
+}
+#Oobj136 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 18;
+  text-align: left;
+  left: 8.00em;
+  top: 50.90em;
+  width: 40.00em;
+  height: 2.80em;
+}
+#Oobj137 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 19;
+  text-align: left;
+  left: 4.30em;
+  top: 48.20em;
+  width: 40.00em;
+  height: 3.10em;
+}
+#Oobj129 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 20;
+  left: 1.20em;
+  top: 69.50em;
+  width: 59.20em;
+  height: 11.40em;
+}
+#Oobj125 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 21;
+  text-align: left;
+  left: 7.90em;
+  top: 77.60em;
+  width: 40.00em;
+  height: 2.10em;
+}
+#Oobj126 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 22;
+  text-align: left;
+  left: 8.10em;
+  top: 75.20em;
+  width: 40.00em;
+  height: 2.90em;
+}
+#Oobj127 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 23;
+  text-align: left;
+  left: 8.10em;
+  top: 72.90em;
+  width: 40.00em;
+  height: 2.80em;
+}
+#Oobj128 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 24;
+  text-align: left;
+  left: 4.40em;
+  top: 70.20em;
+ 
+}
+#Oobj142 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 25;
+  left: 1.20em;
+  top: 58.50em;
+  width: 59.20em;
+  height: 11.40em;
+}
+#Oobj130 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 26;
+  text-align: left;
+  left: 7.90em;
+  top: 66.70em;
+  width: 40.00em;
+  height: 2.10em;
+}
+#Oobj139 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 27;
+  text-align: left;
+  left: 8.10em;
+  top: 64.30em;
+  width: 40.00em;
+  height: 2.90em;
+}
+#Oobj140 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 28;
+  text-align: left;
+  left: 8.10em;
+  top: 61.90em;
+  width: 40.00em;
+  height: 2.80em;
+}
+#Oobj141 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 29;
+  text-align: left;
+  left: 4.40em;
+  top: 59.20em;
+  width: 40.00em;
+  height: 3.10em;
+}
+#Oobj145 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 30;
+  left: 1.10em;
+  top: 29.20em;
+  width: 59.20em;
+  height: 6.20em;
+}
+#Oobj103 {
+  position: absolute;
+  font-size: 10px;
+  z-index: 31;
+  text-align: left;
+  left: 2.60em;
+  top: 30.70em;
+  width: 40.00em;
+  height: 3.00em;
+}
+.txt7 {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color:#646464;
+}
+
+
+.txt7b {
+  font-family: Tahoma, sans-serif;
+  font-size: 24px;
+  color:#FFFFFF;
+}
+.image_bx{
+  background:url(../images/Box_03.png) no-repeat;
+  border:none;
+  cursor:pointer;
+}

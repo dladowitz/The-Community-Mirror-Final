@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, td, th, div, p, label, input {
+	color:#000000;
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+}
+
+#container {
+    width: 500px;
+    position: absolute;
+  	font-size: 10px;
+  	z-index: 11;
+  	text-align: left;
+  	left: 2.10em;
+  	top: 30.20em;
+}
+#containerAns {
+    width: 500px;
+    position: absolute;
+    font-size: 10px;
+    z-index: 11;
+    text-align: left;
+    left: 2.10em;
+    top: 27.20em;
+}
+.clear{ width:100%; overflow:hidden;}
+
+.boxIndent{ padding:20px 21px 47px 19px;}
+
+.box_blk{
+	color:#000000;
+	font-size:16px;
+	line-height:16px;
+	font-weight:normal;
+	display:block;
+	text-align:left;
+	vertical-align:bottom;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+}
+
+.box_blue_bld{
+	color:#5872a7;
+	font-size:16px;
+	line-height:16px;
+	font-weight:bold;
+	display:block;
+	text-align:left;
+	vertical-align:bottom;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 25px;
+}
+
+.box_answers{
+	color:#666666;
+	font-size:14px;
+	line-height:14px;
+	font-weight:normal;
+	display:block;
+	text-align:left;
+	vertical-align:bottom;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 4px;
+	padding-left: 50px;
+}
+
+.box_word_blue{
+	color:#5872a7;
+}
+.txt12 {
+  font-family: Tahoma, sans-serif;
+  font-size: 20px;
+  color:#5872a7;
+}
+.box_hr{
+	color:#92aadb;
+	
+}
+
+.box_daysago{
+	color:#666666;
+	font-size:10px;
+	line-height:8px;
+	font-weight:normal;
+	display:block;
+	text-align:left;
+	vertical-align:bottom;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 4px;
+	padding-left: 25px;
+}
+
+.button{
+	url(../images/rounded_corners_top.jpg);
+	color: #5872a7;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+	margin-top: 2px;
+	margin-right: 10px;
+	margin-bottom: 4px;
+	margin-left: 0px;
+	width : 130px;
+}
+div.profile {background:#f4f4f4 url(../images/rounded_corners_top.jpg) no-repeat top;} 
+div.profile div{background: url(../images/rounded_corners_top.jpg) no-repeat scroll bottom;}
